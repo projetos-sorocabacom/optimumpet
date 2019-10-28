@@ -1,12 +1,7 @@
 <?php
-
 get_header();
-
 $fields = $fields = get_fields();
-
 ?>
-
-
 <main id="fullpage-waltham" class="know-main inner-main">
 
     <section class="section" id="section-header">
@@ -38,10 +33,10 @@ $fields = $fields = get_fields();
 
                 <div class="cell small-12 position-absolute next-section white text-center"
                      data-magellan
-                     data-offset="0"
+                     data-offset="15"
                      data-threshold="0">
                     <a href="#section-map" title="Saiba onde a Waltham se encontra">
-                        <i class="fas fa-chevron-down"></i>
+                        <img src="<?php echo get_template_directory_uri() ?>/dist/img/down-white.png" alt="">
                     </a>
                 </div>
             </div>
@@ -71,7 +66,7 @@ $fields = $fields = get_fields();
                 <figure class="cell small-12 large-6 small-order-1 large-order-2 map-bg position-relative overflow-hidden show-for-large">
                     <img src="<?php echo get_template_directory_uri() ?>/dist/img/map.jpg" alt="Mapa" class="map-img">
 
-                    <img src="<?php echo get_template_directory_uri() ?>/dist/img/travel.gif" alt="Linha demarcando caminho para Waltham" class="position-absolute travel">
+                    <img src="<?php echo get_template_directory_uri() ?>/dist/img/travel2.gif" alt="Linha demarcando caminho para Waltham" class="position-absolute travel">
 
                     <img src="<?php echo get_template_directory_uri() ?>/dist/img/marker.png" alt="Marcador de mapa" class="marker position-absolute">
 
@@ -85,15 +80,15 @@ $fields = $fields = get_fields();
                 </figure>
 
                 <figure class="cell small-12 small-order-1 large-order-2 hide-for-large">
-                    <img src="<?php echo get_template_directory_uri() ?>/dist/img/bg2.jpg" alt="Mapa" class="width-100">
+                    <img src="<?php echo get_template_directory_uri() ?>/dist/img/map_anim.gif" alt="Mapa" class="width-100">
                 </figure>
 
                 <div class="cell small-12 position-absolute next-section primary text-center"
                      data-magellan
-                     data-offset="0"
+                     data-offset="15"
                      data-threshold="0">
                     <a href="#section-slider" title="Conheça nossas áreas de estudo">
-                        <i class="fas fa-chevron-down"></i>
+                        <img src="<?php echo get_template_directory_uri() ?>/dist/img/down-primary.png" alt="">
                     </a>
                 </div>
             </div>
@@ -103,7 +98,7 @@ $fields = $fields = get_fields();
     <section class="section" id="section-slider" data-magellan-target="section-slider">
         <div class="grid-container fluid height-100 slide-content">
             <div class="grid-x grid-padding-x align-middle height-100">
-                <header class="cell small-12 text-center h-areas">
+                <header class="cell small-12 text-center h-areas margin-bottom-1">
                     <h2 style="font-family: 'Gotham-Black', sans-serif !important;">Áreas de estudo</h2>
                 </header>
 
@@ -120,7 +115,7 @@ $fields = $fields = get_fields();
                                     <ul class="menu vertical">
                                         <?php foreach ($area['artigos'] as $key2 => $artigo) { ?>
                                             <li><a href="<?php echo $artigo['artigo_link']; ?>"
-                                                   title="<?php echo $artigo['texto']; ?>" target="_blank"><?php echo $artigo['texto']; ?> <i
+                                                   title="<?php echo $artigo['artigo_texto']; ?>" target="_blank"><?php echo $artigo['artigo_texto']; ?> <i
                                                             class="fas fa-external-link-alt"></i></a></li>
                                         <?php } ?>
                                     </ul>
@@ -141,10 +136,10 @@ $fields = $fields = get_fields();
 
                 <div class="cell small-12 position-absolute next-section white text-center"
                      data-magellan
-                     data-offset="0"
+                     data-offset="15"
                      data-threshold="0">
                     <a href="#section-team" title="Sobre nossos profissionais">
-                        <i class="fas fa-chevron-down"></i>
+                        <img src="<?php echo get_template_directory_uri() ?>/dist/img/down-white.png" alt="">
                     </a>
                 </div>
             </div>
@@ -176,10 +171,10 @@ $fields = $fields = get_fields();
 
                 <div class="cell small-12 position-absolute next-section primary text-center"
                      data-magellan
-                     data-offset="0"
+                     data-offset="15"
                      data-threshold="0">
                     <a href="#section-timeline" title="Confira as pesquisas já realizadas">
-                        <i class="fas fa-chevron-down"></i>
+                        <img src="<?php echo get_template_directory_uri() ?>/dist/img/down-primary.png" alt="">
                     </a>
                 </div>
             </div>
@@ -246,3 +241,7 @@ $fields = $fields = get_fields();
     </section>
 
 </main>
+
+<script>
+    $(document).foundation();
+</script>

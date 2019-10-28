@@ -14550,12 +14550,11 @@ ol.list-upper-roman {
 
 .responsive-list .item {
     padding: 0 10px;
-    min-height: 350px;
 }
 
 .responsive-list .card {
     width: 100%;
-    height: 100%;
+    height: 410px;
     border: 1px solid #fff;
     padding: 70px 50px;
     position: relative
@@ -14859,7 +14858,7 @@ ol.list-upper-roman {
 @media screen and (min-width: 75em) {
     #section-map.active .marker {
         top: 173px;
-        right: 140px;
+        right: 120px;
         width: 8.125rem;
         opacity: 1;
         transform: translateY(0);
@@ -14940,8 +14939,8 @@ ol.list-upper-roman {
     #section-map.active .red-dot {
         opacity: 1;
         transform: scale(1);
-        top: 662px;
-        left: 93px;
+        top: 668px;
+        left: 98px;
     }
 }
 
@@ -14949,10 +14948,15 @@ ol.list-upper-roman {
     padding-top: 100px;
 }
 
+
+.prev, .next {
+    display: inline-block !important;
+}
+
 @media screen and (max-width: 1500px) {
     #section-map.active .marker {
         top: 110px;
-        right: 96px;
+        right: 86px;
         width: 100px;
         opacity: 1;
         transform: translateY(0);
@@ -14963,6 +14967,11 @@ ol.list-upper-roman {
         transform: scale(1);
         top: 460px;
         left: 60px;
+    }
+
+    .responsive-list .card {
+        min-height: 420px;
+        padding: 40px;
     }
 }
 
@@ -14978,7 +14987,16 @@ ol.list-upper-roman {
         font-size: 14px;
     }
     #fullpage-waltham.inner-main {
-        padding-top: 60px;
+        padding-top: 0px;
+    }
+    .h-areas {
+        padding-top: 0px;
+    }
+    #fp-nav {
+        display: none;
+    }
+    .header-bg, .team-bg {
+        height: 300px;
     }
 }
 
@@ -14989,6 +15007,9 @@ ol.list-upper-roman {
     }
     .timeline-footer a, .timeline-footer img {
         width: 100%;
+    }
+    .header-bg, .team-bg {
+        height: 200px;
     }
 }
 

@@ -14,6 +14,9 @@
                 normalScrollElements: $('#section-timeline'),
                 scrollOverflow: true,
             });
+
+            $('.prev').removeClass('slick-arrow');
+            $('.next').removeClass('slick-arrow');
         });
     })(jQuery);
 </script>

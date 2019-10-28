@@ -102,9 +102,10 @@ date_default_timezone_set( 'America/Sao_Paulo' );
 
 //Registro scripts e css
 function basedigital_scripts() {
-
 	//JS
 	wp_enqueue_script( 'jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js', array(), '1.11.1', true );
+	wp_enqueue_script( 'foundation-core', 'https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.core.min.js', array('jquery'), '1.0.0', true );
+    wp_enqueue_script( 'foundation-magellan', 'https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.magellan.min.js', array('foundation-core'), '1.0.0', true );
     wp_enqueue_script( 'foundation', 'https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/foundation.min.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'slick-slider', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array(), '1.8.1', true );
     wp_enqueue_script( 'jquery-fullpage', 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.js', array(), '2.9.5', true );
@@ -112,13 +113,13 @@ function basedigital_scripts() {
 	wp_enqueue_script( 'mask', '//cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.min.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'imageload', '//unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js', array(), '1', true);
 	wp_enqueue_script( 'isotop', '//unpkg.com/isotope-layout@3/dist/isotope.pkgd.js', array(), '1', true );
-    wp_enqueue_script( 'main-js', '/wp-content/themes/basedigital/dist/js/main.min.js?ver=2.1', array(), '1.0.5', true );
+    wp_enqueue_script( 'main-js', '/wp-content/themes/basedigital/dist/js/main.min.js?ver=2.4', array(), '1.0.5', true );
     wp_enqueue_script( 'fontawesome', 'https://kit.fontawesome.com/5ef691494b.js', array(), '1.0.5', true );
 
 	//CSS
 	wp_enqueue_style( 'fullpage-css', 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.css', array(), '1.8.1' );
 	wp_enqueue_style( 'slick-css', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css', array(), '1.8.1' );
-    wp_enqueue_style( 'main-css', '/wp-content/themes/basedigital/dist/css/main.min.css?ver=1.58', array(), '1.0' );
+    wp_enqueue_style( 'main-css', '/wp-content/themes/basedigital/dist/css/main.min.css?ver=1.88', array(), '1.0' );
 }
 
 add_action( 'wp_enqueue_scripts', 'basedigital_scripts' );
@@ -136,7 +137,6 @@ function wordpress_pagination() {
 		'total'   => $wp_query->max_num_pages,
 	) );
 }
-
 
 //Save contact
 add_action( 'wp_ajax_nopriv_filter_post', 'filter_post' );
