@@ -14953,6 +14953,29 @@ ol.list-upper-roman {
     display: inline-block !important;
 }
 
+.vid{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #c2d2e1 !important;
+}
+
+.map-bg video, .map-bg > div {
+    z-index: 9 !important;
+}
+
+.map-bg > div {
+    top: 30px !important;
+}
+
 @media screen and (max-width: 1500px) {
     #section-map.active .marker {
         top: 110px;
@@ -14975,6 +14998,17 @@ ol.list-upper-roman {
     }
 }
 
+@media screen and (max-width: 2000px) {
+    .vid {
+        transform: translateX(-50%) translateY(-50%) scale(0.82);
+    }
+}
+
+@media screen and (min-width: 2100px) {
+    .vid {
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
 
 @media screen and (max-width: 600px) {
     #fullpage-waltham {

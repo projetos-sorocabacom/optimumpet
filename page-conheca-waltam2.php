@@ -63,24 +63,20 @@ $fields = $fields = get_fields();
                     </div>
                 </div>
 
-                <figure class="cell small-12 large-6 small-order-1 large-order-2 map-bg position-relative overflow-hidden show-for-large">
-                    <img src="<?php echo get_template_directory_uri() ?>/dist/img/map.jpg" alt="Mapa" class="map-img">
-
-                    <img src="<?php echo get_template_directory_uri() ?>/dist/img/travel2.gif" alt="Linha demarcando caminho para Waltham" class="position-absolute travel">
-
-                    <img src="<?php echo get_template_directory_uri() ?>/dist/img/marker.png" alt="Marcador de mapa" class="marker position-absolute">
-
-                    <div class="red-dot position-absolute">
-                        <div class="ring-container">
-                            <div class="ringring"></div>
-                            <div class="circle"></div>
-                        </div>
-                        <p>Leicestershire</p>
-                    </div>
+                <figure class="cell small-12 large-6 small-order-1 large-order-2 map-bg position-relative overflow-hidden show-for-large"
+                        data-vide-bg="mp4: <?php echo get_template_directory_uri() ?>/dist/img/map_animation.mp4, poster: <?php echo get_template_directory_uri() ?>/dist/img/map.jpg"
+                        data-vide-options="posterType: jpg, loop: false, position: 0% 0%"
+                >
+<!--                    <video class="vid" autoplay preload="auto" poster="--><?php //echo get_template_directory_uri() ?><!--/dist/img/map.jpg">-->
+<!--                        <source id="mp4" src="--><?php //echo get_template_directory_uri() ?><!--/dist/img/map_animation.mp4" type="video/mp4">-->
+<!--                    </video>-->
                 </figure>
 
                 <figure class="cell small-12 small-order-1 large-order-2 hide-for-large">
-                    <img src="<?php echo get_template_directory_uri() ?>/dist/img/map_anim.gif" alt="Mapa" class="width-100">
+<!--                    <img src="--><?php //echo get_template_directory_uri() ?><!--/dist/img/map_anim.gif" alt="Mapa" class="width-100">-->
+                    <video class="vid-mobile width-100" loop autoplay preload="auto" poster="<?php echo get_template_directory_uri() ?>/dist/img/map.jpg">
+                        <source id="mp4" src="<?php echo get_template_directory_uri() ?>/dist/img/map_animation.mp4" type="video/mp4" class="width-100">
+                    </video>
                 </figure>
 
                 <div class="cell small-12 position-absolute next-section primary text-center"

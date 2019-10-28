@@ -6,6 +6,17 @@
 <script>
     (function ($) {
         $(document).ready(function () {
+            // Video Waltham config
+            const videoElement = (vid) => {
+                if (vid) {
+                    setTimeout(function () {
+                        vid.currentTime = 0;
+                        vid.play();
+                    }, 100)
+                }
+            };
+
+            // Waltham fullpage configs
             $('#fullpage-waltham').fullpage({
                 easing: 'ease',
                 navigation: true,
@@ -13,8 +24,13 @@
                 responsiveWidth: 1024,
                 normalScrollElements: $('#section-timeline'),
                 scrollOverflow: true,
+                onLeave() {
+                    const videoEL = document.querySelector('.map-bg video');
+                    videoElement(videoEL);
+                }
             });
 
+            // Waltaham slide configs
             $('.prev').removeClass('slick-arrow');
             $('.next').removeClass('slick-arrow');
         });
