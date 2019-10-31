@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: 'gotham_bookregular';
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.box-loader{
+    display: none;
+    float: left;
+    width: 100%;
+}
+
+.sk-cube-grid {
+    width: 40px;
+    height: 40px;
+    margin: 40px auto;
+}
+
+.sk-cube-grid .sk-cube {
+    width: 33.33%;
+    height: 33.33%;
+    background-color: #333;
+    float: left;
+    -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+    animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+
+.sk-cube-grid .sk-cube1 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.sk-cube-grid .sk-cube2 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.sk-cube-grid .sk-cube3 {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.sk-cube-grid .sk-cube4 {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+.sk-cube-grid .sk-cube5 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.sk-cube-grid .sk-cube6 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.sk-cube-grid .sk-cube7 {
+    -webkit-animation-delay: 0.0s;
+    animation-delay: 0.0s;
+}
+
+.sk-cube-grid .sk-cube8 {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+.sk-cube-grid .sk-cube9 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+        -webkit-transform: scale3D(1, 1, 1);
+        transform: scale3D(1, 1, 1);
+    }
+    35% {
+        -webkit-transform: scale3D(0, 0, 1);
+        transform: scale3D(0, 0, 1);
+    }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+        -webkit-transform: scale3D(1, 1, 1);
+        transform: scale3D(1, 1, 1);
+    }
+    35% {
+        -webkit-transform: scale3D(0, 0, 1);
+        transform: scale3D(0, 0, 1);
+    }
+}
+
+.container {
+    display: block;
+    width: 980px;
+    margin: 0 auto;
+}
+
+.box-buttons {
+    text-align: center;
+}
+
+.btn-dark {
+    display: inline-block;
+    margin: 0 auto;
+    background: #000000;
+    font-family: 'gotham_mediumregular';
+    font-size: 0.625vw;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 20px 30px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-align: center;
+    .transition(all ease-in-out 150ms);
+    &.white{
+        background: #FFFFFF;
+        border-color: #000000;
+        color: #000000;
+    }
+    @media screen and (min-width: 1024px){
+        &:hover {
+            background: #3A3A3A;
+            border-color: #3A3A3A;
+            color: #FFFFFF;
+        }
+    }
+}
+
+.select-custom {
+    position: relative;
+    float: left;
+    padding: 21px 45px 20px 15px;
+    background: #E4E4E4;
+    cursor: pointer;
+    margin-right: 20px;
+    width: 180px;
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        width: 1px;
+        height: 7px;
+        background-color: #000000;
+        pointer-events: none;
+        .transition(all ease-in-out 150ms);
+    }
+    &:after {
+        right: 16px;
+        .rotate(45deg);
+    }
+    &:before {
+        right: 21px;
+        .rotate(-45deg);
+    }
+    &.active {
+        &:after {
+            .rotate(-45deg);
+        }
+        &:before {
+            .rotate(45deg);
+        }
+
+        .list-option {
+            max-height: 200px;
+        }
+    }
+
+    .selected {
+        font-size: 14px;
+        color: #8C8C8C;
+        position: absolute;
+        padding: 15px 45px 15px 15px;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        line-height: 100%;
+    }
+
+    .list-option {
+        position: absolute;
+        background-color: #E4E4E4;
+        top: 100%;
+        width: 100%;
+        left: 0;
+        max-height: 0;
+        overflow: hidden;
+        .transition(max-height ease-in-out 150ms);
+        li {
+            font-size: 14px;
+            color: #8C8C8C;
+            border-top: 1px solid #bababa;
+            float: left;
+            width: 100%;
+            label {
+                float: left;
+                width: 100%;
+                padding: 10px;
+                cursor: pointer;
+                .transition(all ease-in-out 150ms);
+                &:hover {
+                    background-color: #eeeeee;
+                }
+
+                input {
+                    display: none;
+                }
+            }
+        }
+
+    }
+}
+
+.rangeSlider__handle {
+    top: -3px;
+    width: 21px;
+    height: 21px;
+    background: #FFFFFF;
+}
+
+.rangeSlider__horizontal {
+    height: 15px;
+    background: #FFFFFF;
+}
+
+.rangeSlider__fill {
+    background: rgba(124, 124, 124, 1);
+    background: -moz-linear-gradient(left, rgba(124, 124, 124, 1) 0%, rgba(167, 167, 167, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(124, 124, 124, 1)), color-stop(100%, rgba(167, 167, 167, 1)));
+    background: -webkit-linear-gradient(left, rgba(124, 124, 124, 1) 0%, rgba(167, 167, 167, 1) 100%);
+    background: -o-linear-gradient(left, rgba(124, 124, 124, 1) 0%, rgba(167, 167, 167, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(124, 124, 124, 1) 0%, rgba(167, 167, 167, 1) 100%);
+    background: linear-gradient(to right, rgba(124, 124, 124, 1) 0%, rgba(167, 167, 167, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7c7c7c', endColorstr='#a7a7a7', GradientType=1);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .btn-dark {
+        font-size: 2.812vw;
+    }
+}
+
+.progress__value {
+    stroke-dasharray: 64.292;
+    stroke-dashoffset: 339.292;
+}
+
+@import url(_animate);
+@import url(_mixins);
+@import url(_fonts);
+@import url(_header);
+@import url(_footer);
+@import url(_progressbar);
+@import url(_home);
+@import url(_about);
+@import url(_products);
+@import url(_contact);
+@import url(_single-product);
+@import url(_dicas-concelhos);

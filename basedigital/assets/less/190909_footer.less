@@ -1,0 +1,274 @@
+.footer-main{
+    background-color: #181818;
+    float: left;
+    width: 100%;
+    padding: 80px 0;
+    height: 478px;
+    position: relative;
+
+    .box-1{
+        float: left;
+        width: 40vw;
+        padding-left: 13.020vw;
+        .logo{
+            float: left;
+            width: 145px;
+
+            .svg-logo {
+                fill: #FFFFFF;
+            }
+        }
+
+        .social{
+            float: left;
+            width: 100%;
+
+            p{
+                margin-top: 150px;
+                color: #FFFFFF;
+                font-size: 16px;
+                margin-bottom: 17px;
+            }
+
+            a{
+                font-family: 'gotham_mediumregular';
+                color: #FFFFFF;
+
+                img{
+                    margin-right: 10px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+
+    .box-2{
+        float: right;
+        padding-right: 8vw;
+        margin-top: -30px;
+        .col-1{
+            float: left;
+            margin-left: 7.166vw;
+            &:first-child{
+                margin: 0;
+            }
+
+            h3{
+                font-family: 'gotham_mediumregular';
+                color: #FFFFFF;
+                font-size: 11px;
+                margin-bottom: 18px;
+                text-transform: uppercase;
+            }
+
+            a{
+                display: block;
+                font-family: 'gotham_mediumregular';
+                color: #8d8d8d;
+                font-size: 11px;
+                margin-bottom: 18px;
+                &:hover{
+                    color: #fff;
+                    transition: color 0.2s ease;
+                }
+            }
+
+            .satisfacao{
+                float: left;
+                font-family: 'gotham_mediumregular';
+                color: #8d8d8d;
+                font-size: 11px;
+                margin-bottom: 20px;
+                border-top: 1px solid #8d8d8d;
+                margin-top: 20px;
+                padding-top: 20px;
+            }
+        }
+    }
+
+    .copy{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        width: 100%;
+        background: #000000;
+
+        p{
+            float: left;
+            font-family: 'gotham_mediumregular';
+            color: #737373;
+            font-size: 11px;
+            margin: 20px;
+        }
+
+        .links{
+            float: right;
+
+            li{
+                float: left;
+                color: #737373;
+                margin: 15px;
+
+                a{
+                    position: relative;
+                    top: -2px;
+                    font-family: 'gotham_mediumregular';
+                    font-size: 11px;
+                    color: #737373;
+                    .transition(all ease-in-out 150ms);
+                    &:hover{
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .footer-main{
+        .copy{
+            p{
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .footer-main{
+        position: relative;
+        padding: 40px 0 0 0;
+        height: auto;
+
+        .box-1{
+            width: 100%;
+            padding: 0 6.25vw;
+            .logo{
+                width: 40%;
+                .svg-logo {
+                }
+            }
+
+            .social{
+                float: right;
+                width: 48%;
+                margin: 0 0 0 25px;
+
+                p{
+                    font-size: 2.81vw;
+                    margin: 0 0 15px 0;
+                }
+
+                a{
+                    img{
+                    }
+                }
+            }
+        }
+
+        .box-2{
+            width: 100%;
+            margin-top: 50px;
+            padding: 0 6.25vw;
+
+            .col-1{
+                width: 100%;
+                margin: 0 0 24px 0 !important;
+                h3{
+                    position: relative;
+                    font-size: 2.81vw;
+                    text-transform: uppercase;
+                    border-bottom: 1px solid #3b3b3b;
+                    padding-bottom: 10px;
+                    margin-bottom: 0;
+                    &.active{
+                        &:before{
+                            .rotate(-45deg);
+                        }
+                        &:after{
+                            .rotate(45deg);
+                        }
+                    }
+                    &:after,
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        width: 10px;
+                        height: 2px;
+                        background: #FFFFFF;
+                        top: 4px;
+                        .transition(all ease-in-out 150ms);
+                    }
+                    &:before{
+                         right: 16px;
+                        .rotate(45deg);
+                    }
+                    &:after{
+                        right: 10px;
+                        .rotate(-45deg);
+                    }
+                }
+
+                ul{
+                    margin-top: 0;
+                    max-height:0;
+                    overflow: hidden;
+                    .transition(all ease-in-out 150ms);
+                    &.active{
+                        max-height: 400px;
+                    }
+                    li{
+                        padding: 10px;
+                        border-bottom: 1px solid #3b3b3b;
+                    }
+                }
+
+                a{
+                    font-size: 2.81vw;
+                    margin-bottom: 0;
+                }
+
+                .satisfacao{
+                    padding: 0;
+                    margin: 0;
+                    border: none;
+                    font-size: 2.81vw;
+                    float: none;
+                }
+            }
+        }
+
+        .copy{
+            position: relative;
+            float: left;
+            width: 100%;
+            margin-top: 30px;
+            padding-bottom: 15px;
+            p{
+                float: left;
+                width: 100%;
+                font-size: 2.34vw;
+                text-align: center;
+                margin: 0;
+                padding: 20px;
+            }
+
+            .links{
+                position: relative;
+                width: 100%;
+                text-align: center;
+                li{
+                    float: none;
+                    display: inline-block;
+                    margin: 0 2px;
+                    a{
+                        font-size: 8px;
+                        &:hover{
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,444 @@
+body{
+    background: #eeeeec;
+}
+
+.modal-stores{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    z-index: 999999;
+    background-color: #eeeeec;
+    overflow: auto;
+    .transition(all ease-in-out 250ms);
+    &.active{
+        top: 0;
+    }
+
+    .close{
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        width: 55px;
+        height: 55px;
+        border: 1px solid #c7c7c7;
+        border-radius: 50%;
+        &:after,
+        &:before{
+            content: '';
+            position: absolute;
+            width: 21px;
+            height: 1px;
+            background-color: #000000;
+            top: 50%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            .transition(all ease-in-out 150ms);
+        }
+        &:after{
+            .rotate(45deg);
+        }
+        &:before{
+            .rotate(135deg);
+        }
+        &:hover{
+            &:after{
+                .rotate(225deg);
+            }
+            &:before{
+                .rotate(315deg);
+            }
+        }
+    }
+
+    .box-content{
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+    }
+
+    h6{
+        font-family: 'gotham_boldregular';
+        font-size: 60px;
+        text-align: center;
+    }
+
+    p{
+        text-align: center;
+        font-size: 16px;
+        margin: 27px 0 75px 0;
+    }
+
+    .list-stores{
+        text-align: center;
+
+        li{
+            margin: 0 25px;
+            display: inline-block;
+            a{
+                .transition(all ease-in-out 150ms);
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
+
+.modal-niveis-garantia{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    z-index: 999999;
+    background-color: #eeeeec;
+    overflow: auto;
+    .transition(all ease-in-out 250ms);
+    &.active{
+        top: 0;
+    }
+
+    .close{
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        width: 55px;
+        height: 55px;
+        border: 1px solid #c7c7c7;
+        border-radius: 50%;
+        &:after,
+        &:before{
+            content: '';
+            position: absolute;
+            width: 21px;
+            height: 1px;
+            background-color: #000000;
+            top: 50%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            .transition(all ease-in-out 150ms);
+        }
+        &:after{
+            .rotate(45deg);
+        }
+        &:before{
+            .rotate(135deg);
+        }
+        &:hover{
+            &:after{
+                .rotate(225deg);
+            }
+            &:before{
+                .rotate(315deg);
+            }
+        }
+    }
+
+    .box-content{
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+    }
+
+    h6{
+        font-family: 'gotham_boldregular';
+        font-size: 60px;
+        text-align: center;
+        margin: 6vw 0 60px 0;
+    }
+
+    table{
+        margin: 0 auto;
+        font-size: 14px;
+        color: #525252;
+        width: 500px;
+        tr{
+            td{
+                border-top: 1px solid #dcdcdc;
+                padding: 30px 0;
+            }
+        }
+    }
+
+    p{
+        display: block;
+        max-width: 700px;
+        margin: 0 auto;
+        color: #797979;
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 30px;
+    }
+}
+
+.product{
+    position: relative;
+    padding-top: 75px;
+    z-index: 999;
+
+    .box-filtro{
+        float: left;
+        width: 100%;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #cccccc;
+        margin-bottom: 77px;
+        .text{
+            float: left;
+            margin: 11px 20px 0 0;
+        }
+        .select-custom{
+            display: none;
+            &.show{
+                display: block;
+            }
+        }
+    }
+
+    .title-main{
+        text-align: center;
+        font-size: 60px;
+        margin-top: 87px;
+        margin-bottom: 70px;
+        font-family: 'gotham_boldregular';
+    }
+
+    .title-section{
+        font-family: 'gotham_mediumregular';
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 60px;
+    }
+
+    .list-products{
+        text-align: center;
+        li{
+            width: 260px;
+            float: left;
+            margin-bottom: 60px !important;
+            padding: 0 10px;
+            &:nth-child(5n+2){
+                margin: 0 100px;
+            }
+            &.inactive{
+                display: none;
+            }
+
+            img{
+                margin-bottom: 12px;
+                width: 100%;
+            }
+
+            .title-product{
+                font-family: 'gotham_mediumregular';
+                font-size: 16px;
+                color: #000000;
+
+                h3{
+                    margin-bottom: 33px;
+                    height: 40px;
+                }
+            }
+
+            .btn-dark{
+                width: 219px;
+                height: 50px;
+                line-height: 12px;
+                margin-bottom: 19px;
+                &.white{
+                    background: #eeeeec;
+                    &:hover{
+                        color: #000000;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .modal-stores{
+        .close{
+            top: 15px;
+            right: 15px;
+            height: 35px;
+            width: 35px;
+            &:after,
+            &:before{
+                content: '';
+                position: absolute;
+                width: 14px;
+                height: 1px;
+                background-color: #000000;
+                top: 50%;
+                left: 0;
+                right: 0;
+                margin: auto;
+                .transition(all ease-in-out 150ms);
+            }
+            &:after{
+                .rotate(45deg);
+            }
+            &:before{
+                .rotate(135deg);
+            }
+            &:hover{
+                &:after{
+                    .rotate(225deg);
+                }
+                &:before{
+                    .rotate(315deg);
+                }
+            }
+        }
+
+        .box-content{
+            height: 50vh;
+        }
+
+        h6{
+            font-size: 30px;
+        }
+
+        p{
+            font-size: 14px;
+            margin: 16px auto 55px auto;
+            color: #525252;
+            display: block;
+            width: 280px;
+        }
+
+        .list-stores{
+            text-align: center;
+
+            li{
+                margin-bottom: 20px;
+                img{
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    .modal-niveis-garantia{
+        padding: 20px;
+        .close{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 35px;
+            height: 35px;
+        }
+
+        .box-content{
+            position: absolute;
+            width: 100%;
+            height: 300px;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+        }
+
+        h6{
+            font-size: 6vw;
+            margin: 18vw 0 14px 0;
+        }
+
+        h4{
+            font-family: 'gotham_boldregular';
+            font-size: 4vw;
+            margin: 4vw 0 34px 0;
+            text-align: center;
+        }
+
+        table{
+            width: 100%;
+            tr{
+                td{
+                    padding: 15px 0;
+                    &:last-child{
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        p{
+            width: 100%;
+            font-size: 3vw;
+        }
+    }
+
+    .product{
+
+        .box-filtro{
+            padding-bottom: 10px;
+            margin-bottom: 28px;
+            .text{
+                float: left;
+                width: 26%;
+                font-size: 4vw;
+                margin-bottom: 20px;
+                padding-left: 15px;
+                margin-top: 17px;
+            }
+
+            .select-custom{
+                float: left;
+                width: 32%;
+                font-size: 4vw;
+                margin: 5px 5px 0 0;
+                .selected{
+                    font-size: 4vw;
+                }
+            }
+        }
+
+        .title-main{
+            font-family: 'gotham_boldregular';
+            font-size: 30px;
+            margin: 0 0 20px;
+        }
+
+        .title-section{
+            font-family: 'gotham_mediumregular';
+            text-align: center;
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .list-products{
+            margin-top: 30px;
+            li{
+                width: 50%;
+                margin-bottom: 0 !important;
+                padding: 0 20px;
+                &:nth-of-type(3n+2){
+                    margin: 0;
+                }
+
+                .title-product{
+                    h3{
+                        font-size: 3vw;
+                        line-height: 5.5vw;
+                        height: 60px;
+                        margin-bottom: 15px;
+                    }
+                }
+
+                .btn-dark{
+                    padding: 10px;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

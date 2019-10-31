@@ -1,0 +1,1 @@
+!function(){"use strict";var n={init:function(){i.init()}},i={init:function(){console.log("Teste"),$("#fullpage").fullpage({onLeave:function(n,i,o){console.log(i)}})}};n.init()}();

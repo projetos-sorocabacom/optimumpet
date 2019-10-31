@@ -1,5 +1,5 @@
 <?php
-/*Template name: Waltham2*/
+/*Template name: Waltham Nova*/
 
 get_header();
 $fields = $fields = get_fields();

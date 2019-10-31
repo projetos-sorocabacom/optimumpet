@@ -1,0 +1,623 @@
+.home {
+    .section {
+        position: relative;
+        height: 100%;
+        &:first-child {
+            padding-top: 0;
+        }
+    }
+
+    .slider-home {
+        float: left;
+        width: 100%;
+        height: 100%;
+        background: #000000 ;
+
+        .item {
+            width: 100vw !important;
+            height: 100vh;
+            background-size: cover;
+            position: relative;
+            background-position: center center;
+ 
+            .info {
+                display: block;
+                width: 720px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    max-width: 100%;
+                }
+
+                h2 {
+                    font-family: 'gotham_boldregular';
+                    margin-top: 50px;
+                    color: #FFFFFF;
+                    text-align: center;
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+
+    .progressBarContainer {
+        position: absolute;
+        bottom: 100px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .progressBarContainer div {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        padding: 0;
+        cursor: pointer;
+        margin-right: 1%;
+        color: white;
+    }
+
+    .progressBarContainer div:last-child {
+        margin-right: 0;
+    }
+
+    .progressBarContainer div span.progressBar {
+        width: 100%;
+        height: 2px;
+        background-color: rgba(255, 255, 255, 0.0);
+        display: block;
+        position: relative;
+        .progress{
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transform: translateY(-50%) rotate(-90deg) scale(0.6);
+        }
+        &:after{
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: transparent;
+            border: 2px solid #fff;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%,-50%)
+        }
+        &:hover{
+            &:after{
+                width: 8px;
+                height: 8px;
+                transition: background 0.2s ease;
+            }
+        }
+        &.active{
+            &:after{
+                width: 8px;
+                height: 8px;
+                background: #fff;
+                transition: background 0.2s ease;
+            }
+            .progress{
+                opacity: 1;
+                transform: translateY(-50%) rotate(-90deg) scale(1);
+                transition: transform 0.2s ease, opacity 0.2s ease;
+            }
+        }
+        
+    }
+
+    .progressBarContainer div span.progressBar .inProgress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0);
+        width: 0%;
+        height: 2px;
+    }
+
+    .paginate-scroll {
+        position: absolute;
+        right: 5vw;
+        top: 75px;
+        bottom: 0;
+        margin: auto 0;
+        height: 174px;
+        z-index: 9999;
+        opacity: 0;
+        .transition(all ease-in-out 700ms);
+        &.active {
+            opacity: 1;
+        }
+
+        .active {
+            position: absolute;
+            width: 21px;
+            height: 21px;
+            left: -6px;
+            border-radius: 50%;
+            border: 2px solid #DCDCDC;
+            z-index: 9;
+            .transition(all ease-in-out 700ms);
+
+            &:after {
+                position: absolute;
+                content: '';
+                width: 9px;
+                height: 9px;
+                border-radius: 50%;
+                background: #2A2A2A;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+            }
+
+            &.step-1 {
+                top: -6px;
+            }
+            &.step-2 {
+                top: 52px;
+            }
+            &.step-3 {
+                top: 110px;
+            }
+        }
+
+        .page {
+            position: relative;
+            display: block;
+            margin-bottom: 49px;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            border: 2px solid #9A9A9A;
+            &:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+            &:after {
+                position: absolute;
+                content: '';
+                width: 1px;
+                height: 41px;
+                left: 2px;
+                top: 11px;
+                background: #D2D2D2;
+            }
+        }
+    }
+
+    .container-fullpage {
+        overflow: hidden;
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        background-size: cover;
+        left: 0;
+        transition: all ease 700ms;
+        &.position-bottom {
+            bottom: -100%;
+            &.active {
+                bottom: 0;
+            }
+        }
+        &.position-top {
+            top: -100%;
+            &.active {
+                top: 0;
+            }
+        }
+
+        .info-product {
+
+            .image {
+                opacity: 0;
+                position: absolute;
+                width: auto;
+                height: 100%;
+                width: 63vw;
+                bottom: 0;
+                left: 0;
+                background-size: cover;
+                background-position: left top;
+                background-repeat: no-repeat;
+                &.active {
+                    opacity: 1;
+                }
+            }
+
+            .content {
+                position: absolute;
+                background: url(../img/bg-risco-home-desktop.png) no-repeat left 0;
+                height: 100vh;
+                right: 0;
+                width: 58.49vw;
+                background-size: cover;
+
+                .box-info {
+                    position: absolute;
+                    height: 380px;
+                    width: 30.49vw;
+                    top: 75px;
+                    bottom: 0;
+                    left: 85px;
+                    right: 0;
+                    margin: auto;
+                    z-index: 100;
+
+                    .title {
+                        display: block;
+                        font-family: 'gotham_boldregular';
+                        font-size: 3.125vw;
+                        opacity: 0;
+                        &.active {
+                            opacity: 1;
+                        }
+                    }
+
+                    .description {
+                        display: block;
+                        font-size: 16px;
+                        line-height: 29px;
+                        opacity: 0;
+                        margin: 50px 0;
+                        color: #525252;
+                        &.active {
+                            opacity: 1;
+                        }
+                    }
+
+                    .selo {
+                        opacity: 0;
+                        display: block;
+                        max-width: 60%;
+                        &.active {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .our-products {
+        height: auto !important;
+
+        .fp-scroller{
+            float: left;
+            width: 100%;
+        }
+
+        .title-section {
+            font-family: 'gotham_boldregular';
+            font-size: 3.125vw;
+            text-align: center;
+            margin-top: 10.291666666666667vw;
+        }
+
+        .food-box {
+            float: left;
+            width: 50%;
+            padding-top: 21.816vw;
+            margin-top: -17.76vw;
+            padding-bottom: 5.989vw;
+            background-color: #eeeeec;
+            &.dog {
+
+            }
+            &.cat {
+                background: #DCDCDC;
+            }
+
+            h3{
+                font-family: 'gotham_mediumregular';
+                font-size: 1.04vw;
+                text-align: center;
+            }
+
+            img{
+                display: block;
+                margin: 38px auto;
+            }
+        }
+
+        .about-box{
+            float: left;
+            width: 50%;
+            height: 365px;
+            border-top: 1px solid #dcdcdc;
+            background-color: #eeeeec;
+            
+            h4{
+                font-family: 'gotham_mediumregular';
+                margin-top: 3.38vw;
+                text-align: center;
+            }
+
+            p{
+                display: block;
+                font-size: 16px;
+                color: #5e5e5e;
+                line-height: 24px;
+                margin: 24px 0;
+                text-align: center;
+                width: 645px;
+                max-width: 90%;
+                margin: 25px auto 30px;
+            }
+            .btn-dark{
+                padding: 18px 65px;
+            }
+            &.waltham{
+                background: #e4e4e4;
+                p{
+                    width: 427px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .home {
+        .container-fullpage {
+            .info-product {
+                .content {
+                    width: 67.49vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+
+        #fullpage {
+            position: relative;
+            z-index: 99;
+        }
+
+        .section {
+            overflow: hidden;
+        }
+
+        .slider-home{
+            height: 100%;
+
+            .item{
+                height: 100%;
+                .info{
+                    img{
+                        max-width: 60%;
+                    }
+                }
+            }
+        }
+
+        .go-next-section{
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            left: 0;
+            right: 0;
+            bottom: 40px;
+            margin: 0 auto;
+            &:before,
+            &:after{
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 2px;
+                top: 10px;
+                background: #FFFFFF;
+            }
+            &:after{
+                left: -1px;
+                .rotate(45deg);
+            }
+            &:before{
+                right: -1px;
+                .rotate(-45deg);
+            }
+        }
+
+        .container-fullpage {
+            z-index: 80;
+
+            .info-product {
+                .image {
+                    top: 14.688vw;
+                    height: 50vh;
+                    width: 100%;
+                    background-position: center top;
+                }
+
+                .content {
+                    position: absolute;
+                    background: url(../img/bg-risco-home-mobile.png) no-repeat left 0;
+                    background-size: cover;
+                    height: 54vh;
+                    left: 0;
+                    bottom: 0;
+                    width: 100vw;
+                    padding-top: 0;
+
+                    .box-info {
+                        position: relative;
+                        height: auto;
+                        width: 87%;
+                        padding-right: 35px;
+                        left: 0;
+                        top: 50px;
+
+                        .title {
+                            font-size: 6.25vw;
+                        }
+
+                        .description {
+                            margin: 3vh auto;
+                            font-size: 3.29375vw;
+                            line-height: 5vw;
+                        }
+                    }
+                }
+            }
+        }
+
+        .slider-home {
+            .item {
+                .info {
+                    width: 80%;
+
+                    h2 {
+                        font-size: 5vw;
+                    }
+                }
+            }
+        }
+
+        .paginate-scroll {
+            top: calc(~"100vh - 40vh");
+            .active {
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                left: -4px;
+                border-radius: 50%;
+                border: 2px solid #DCDCDC;
+                z-index: 9;
+                .transition(all ease-in-out 700ms);
+
+                &:after {
+                    position: absolute;
+                    content: '';
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background: #2A2A2A;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    margin: auto;
+                }
+
+                &.step-1 {
+                    top: -5px;
+                }
+                &.step-2 {
+                    top: 50px;
+                }
+                &.step-3 {
+                    top: 105px;
+                }
+            }
+
+            .page {
+                position: relative;
+                display: block;
+                margin-bottom: 49px;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                border: 2px solid #9A9A9A;
+                &:last-child {
+                    &:after {
+                        display: none;
+                    }
+                }
+                &:after {
+                    position: absolute;
+                    content: '';
+                    width: 1px;
+                    height: 41px;
+                    left: 1px;
+                    top: 8px;
+                    background: #D2D2D2;
+                }
+            }
+        }
+
+
+        .our-products {
+
+            .fp-scroller{
+                float: left;
+                width: 100%;
+                top: 55px;
+                position: relative;
+                padding-bottom: 55px;
+            }
+
+            .title-section {
+                font-size: 6.462vw;
+                top: -10px;
+                position: relative;
+            }
+
+            .food-box {
+                width: 100%;
+                padding-bottom: 31.816vw;
+                &.dog {
+                    position: relative;
+                    margin-bottom: 15vw;
+                    background: #e4e4e4;
+                    border-bottom: 1px solid #dcdcdc;
+                    z-index: 999999;
+                }
+                &.cat {
+                    background: #e4e4e4;
+                }
+
+                h3{
+                    font-size: 4.062vw;
+                    top: 7px;
+                    position: relative;
+                }
+
+                img{
+                    width: 60%;
+                }
+            }
+
+            .about-box{
+                width: 100%;
+                padding: 40px 15px 50px;
+                height: auto;
+
+                h4{
+                
+                }
+
+                p{
+                
+                }
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+.slick-list, .slick-track { height: 100%; }
+
+@media(max-width:600px){
+    .step-4{
+        .selo{
+            max-width: 25% !important;
+        }
+    }
+}
